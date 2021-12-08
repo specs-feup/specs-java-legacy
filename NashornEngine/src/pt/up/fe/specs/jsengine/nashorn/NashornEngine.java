@@ -148,6 +148,7 @@ public class NashornEngine implements JsEngine {
         return (boolean) result;
     }
 
+    @Override
     public boolean isArray(Object object) {
         return object instanceof ScriptObjectMirror
                 && ((ScriptObjectMirror) object).isArray();
@@ -221,6 +222,48 @@ public class NashornEngine implements JsEngine {
     @Override
     public boolean supportsProperties() {
         return true;
+    }
+
+    @Override
+    public double asDouble(Object value) {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public Object toJava(Object value) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public Object call(Object function, Object... args) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public boolean isNumber(Object object) {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+    @Override
+    public boolean isObject(Object object) {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+    @Override
+    public boolean isString(Object object) {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+    @Override
+    public boolean isBoolean(Object object) {
+        // TODO Auto-generated method stub
+        return false;
     }
 
 }
