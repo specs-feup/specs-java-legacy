@@ -131,7 +131,7 @@ public class NashornEngine implements JsEngine {
     // }
 
     @Override
-    public Object eval(String script, Object scope, JsFileType type) {
+    public Object eval(String script, Object scope, JsFileType type, String source) {
         try {
             return engine.eval(script, (Bindings) scope);
         } catch (ScriptException e) {
