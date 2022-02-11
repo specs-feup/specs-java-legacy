@@ -27,6 +27,7 @@ import jdk.nashorn.api.scripting.ScriptObjectMirror;
 import jdk.nashorn.api.scripting.ScriptUtils;
 import pt.up.fe.specs.jsengine.ForOfType;
 import pt.up.fe.specs.jsengine.JsEngine;
+import pt.up.fe.specs.jsengine.JsFileType;
 import pt.up.fe.specs.util.SpecsCheck;
 
 /**
@@ -111,7 +112,7 @@ public class NashornEngine implements JsEngine {
     }
 
     @Override
-    public Object eval(String script) {
+    public Object eval(String script, String source) {
         try {
             return engine.eval(script);
         } catch (ScriptException e) {
@@ -130,7 +131,7 @@ public class NashornEngine implements JsEngine {
     // }
 
     @Override
-    public Object eval(String script, Object scope) {
+    public Object eval(String script, Object scope, JsFileType type) {
         try {
             return engine.eval(script, (Bindings) scope);
         } catch (ScriptException e) {
