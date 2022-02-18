@@ -25,8 +25,8 @@ import jdk.nashorn.api.scripting.NashornScriptEngine;
 import jdk.nashorn.api.scripting.NashornScriptEngineFactory;
 import jdk.nashorn.api.scripting.ScriptObjectMirror;
 import jdk.nashorn.api.scripting.ScriptUtils;
+import pt.up.fe.specs.jsengine.AJsEngine;
 import pt.up.fe.specs.jsengine.ForOfType;
-import pt.up.fe.specs.jsengine.JsEngine;
 import pt.up.fe.specs.jsengine.JsFileType;
 import pt.up.fe.specs.util.SpecsCheck;
 
@@ -36,7 +36,7 @@ import pt.up.fe.specs.util.SpecsCheck;
  * 
  */
 @Deprecated
-public class NashornEngine implements JsEngine {
+public class NashornEngine extends AJsEngine {
 
     private static final String NEW_ARRAY = "[]"; // Faster
 
