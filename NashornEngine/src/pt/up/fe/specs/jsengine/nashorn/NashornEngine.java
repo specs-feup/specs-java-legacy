@@ -267,4 +267,10 @@ public class NashornEngine extends AJsEngine {
         return false;
     }
 
+    @Override
+    public boolean isFunction(Object object) {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
 }
